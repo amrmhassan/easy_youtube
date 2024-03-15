@@ -6,8 +6,6 @@ import 'package:easy_youtube/datasource/stream_info_datasource.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-String youtubeLink = 'https://www.youtube.com/watch?v=-KkH14fJKos';
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -25,7 +23,8 @@ class HomePage extends StatelessWidget {
                   Directory directory = Directory('/sdcard/easy_youtube');
                   StreamInfoDatasource videoDatasource =
                       StreamInfoDatasource(directory);
-                  await videoDatasource.downloadLink(youtubeLink);
+                  await videoDatasource
+                      .downloadLink('https://youtube.com/watch?v=q7REefnce9A');
                 },
                 child: Text('Convert'))
           ],

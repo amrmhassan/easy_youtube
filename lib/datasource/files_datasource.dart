@@ -14,12 +14,12 @@ class FilesDatasource {
     FileNameModel sanitizedText = FileNameModel.fromString(text);
 
     // Limit length (adjust the limit as needed)
-    sanitizedText = await _generateUniqueName(sanitizedText);
+    sanitizedText = await generateUniqueName(sanitizedText);
 
     return sanitizedText.toString();
   }
 
-  Future<FileNameModel> _generateUniqueName(FileNameModel fileModel) async {
+  Future<FileNameModel> generateUniqueName(FileNameModel fileModel) async {
     if (!parent.existsSync()) {
       return fileModel;
     }
@@ -28,7 +28,7 @@ class FilesDatasource {
         .any((element) => p.basename(element.path) == fileModel.toString());
     if (exist) {
       var newRandom = fileModel.randomize();
-      return _generateUniqueName(newRandom);
+      return generateUniqueName(newRandom);
     } else {
       return fileModel;
     }

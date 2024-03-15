@@ -1,6 +1,7 @@
 import 'dart:io';
 
-import 'package:easy_youtube/datasource/download_datasource.dart';
+import 'package:easy_youtube/constants/runtime.dart';
+import 'package:easy_youtube/datasource/media_download_datasource.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 import "package:collection/collection.dart";
 
@@ -14,14 +15,16 @@ class StreamInfoDatasource {
     var video = await _yt.videos.get(link);
     String videoId = video.id.value;
     String title = video.title;
+
     var streams = await _yt.videos.streams.getManifest(videoId);
     var audios = getAudios(streams);
     var videos = getVideos(streams);
 
-    DownloadDatasource downloadDatasource =
-        DownloadDatasource(audios, _downloadDir);
-    await downloadDatasource.downloadVideo(videos.first, title);
-    print('Downloaded');
+    MediaDownloadDatasource downloadDatasource =
+        MediaDownloadDatasource(audios, _downloadDir);
+
+    await downloadDatasource.downloadVideo(videos.last, title);
+    logger.i('Downloaded');
   }
 
   List<VideoOnlyStreamInfo> getVideos(StreamManifest streams) {

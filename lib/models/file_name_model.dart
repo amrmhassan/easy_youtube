@@ -56,7 +56,7 @@ class FileNameModel {
       random = parts.last;
     } else {
       random = '';
-      name = fileName;
+      name = basenameOnly;
     }
     return FileNameModel(name: name, random: random, ext: ext);
   }

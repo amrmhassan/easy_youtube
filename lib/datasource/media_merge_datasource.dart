@@ -35,7 +35,7 @@ class MediaMergeDatasource {
     if (!ReturnCode.isSuccess(returnCode)) {
       final output = await session.getOutput();
       logger.e(output);
-      print(returnCode.toString());
+      logger.e(returnCode.toString());
       throw Exception('not succeeded');
     }
     audioFile.deleteSync();
@@ -47,8 +47,9 @@ class MediaMergeDatasource {
   Future<String> mergeInPlace({
     required String videoPath,
     required String audioPath,
+    required String outputPath,
   }) async {
-    FileNameModel fileNameModel = FileNameModel.fromPath(videoPath);
+    FileNameModel fileNameModel = FileNameModel.fromPath(outputPath);
 
     return mergeVideoAudio(
       videoPath: videoPath,
