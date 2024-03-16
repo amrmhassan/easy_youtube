@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:easy_youtube/constants/runtime.dart';
 import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
 import 'package:ffmpeg_kit_flutter/return_code.dart';
-import 'package:easy_youtube/models/file_name_model.dart';
+import 'package:easy_youtube/core/models/file_name_model.dart';
 
 class MediaMergeDatasource {
   Future<String> mergeVideoAudio({

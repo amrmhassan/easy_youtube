@@ -3,6 +3,7 @@
 import 'package:easy_youtube/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
+// implement the clean up to delete the video and audio temp paths after downloading, not after merging
 void main() {
   runApp(const MyApp());
 }

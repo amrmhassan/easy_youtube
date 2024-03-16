@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:easy_youtube/datasource/stream_info_datasource.dart';
+import 'package:easy_youtube/core/datasource/stream_info_datasource.dart';
 
 String youtubeLink = 'https://www.youtube.com/watch?v=pxl-tA1tm80';
 

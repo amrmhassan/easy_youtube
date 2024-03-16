@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:easy_youtube/constants/runtime.dart';
-import 'package:easy_youtube/datasource/file_download_datasource.dart';
-import 'package:easy_youtube/datasource/media_merge_datasource.dart';
+import 'package:easy_youtube/core/datasource/file_download_datasource.dart';
+import 'package:easy_youtube/core/datasource/media_merge_datasource.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 class MediaDownloadDatasource {

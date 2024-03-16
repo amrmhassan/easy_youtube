@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:easy_youtube/constants/runtime.dart';
-import 'package:easy_youtube/datasource/files_datasource.dart';
-import 'package:easy_youtube/models/file_name_model.dart';
+import 'package:easy_youtube/core/datasource/files_datasource.dart';
+import 'package:easy_youtube/core/models/file_name_model.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 class FileDownloadDatasource {

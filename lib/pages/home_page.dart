@@ -2,7 +2,7 @@
 
 import 'dart:io';
 
-import 'package:easy_youtube/datasource/stream_info_datasource.dart';
+import 'package:easy_youtube/core/datasource/stream_info_datasource.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
